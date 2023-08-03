@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: rgb(236, 143, 77);
+    --secondary-color: rgb(41, 41, 195); 
+    --tertiary-color: rgb(76, 163, 218);
+}
 
 body{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -16,52 +21,70 @@ body{
 
 header {
     /* removing display:flex adding in width: 100% */
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: rgb(0, 0, 177);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 100%; */
+    padding: 1%;
+    color: aqua;
+    background-color: var(--primary-color);
+}
+
+/* was having a issue with the font wasn't adjusting correctly.
+I had a fixed value for the height and that was messing up the adjustments. */
+
+h1 {
+    margin: 0;
 }
 
 header h1 {
     display: flex;
-    color: rgb(0, 0, 177);
-    background-color: rgb(255, 205, 113);
-    margin-top: 10px;
-    margin-bottom: 10px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     width: 33%;
-    height: 80px;
-    /* font isn't working correctly */
-    font-size: 400%;
+   /* font is fixed, adjusted percentage */
+    font-size: 300%;
     align-items: center;
-    padding-left: 5px;
+    flex-shrink: 1;
+    padding: 1%;
+    margin: 0;
 }
 
 /* want to have nav on the same entry as the header */
 nav {
     /* having all the flex items removed. Using display: inline to get elements where I need them */
-    text-align: right;
-    background-color: lightsalmon;
-    padding-right: 30px;
-    display: inline;
-    align-items: end;
-    flex-direction: row;
-    justify-content: flex-end;
-    display: inline-flex;
+    display: flex;
+    /* issue was not using the justify-content: space-between correctly. Nav is now centered with name (h1). */
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    color: var(--secondary-color);
+    min-height: 50px;
 }
+
+nav ul {
+    display: flex;
+} 
 
 nav a {
-    color: darkblue;
+    color: var(--secondary-color);
     padding: 14px 15px;
     text-decoration: underline 2px;
-    text-align: center;
+    text-align: end;
+    font-weight: bold;
+    font-size: x-large;
 }
 
+/* added drop shadow  */
 h2 {
     font-size: 5vh;
+    text-shadow: 3px 3px 2px darkgoldenrod;
 }
 
+/* no further changes at this time */
 .subtitle {
     font-family: cursive;
+    color: rgb(230, 197, 16);
     background-color: lightgoldenrodyellow;
     font-size: 4vh;
     text-align: right;
@@ -75,30 +98,31 @@ h2 {
 
 .about_me, .work, .contact_me {
     display: flex;
-    background-color: lightskyblue;
-    padding: 5px;
+    background-color: var(--tertiary-color);
+    padding: 1%;
 }
 
 h3 {
     display: flex;
     padding: 15px 10px 15px 5px;
-    flex-direction: column;
-    background-color: lightsalmon;
-    width: 144px;
-    min-width: 144px;
-    border-right: 5px solid rgb(54, 23, 11);
+    width: 15%;
+    min-width: 15%;
+    border-right: 5px solid var(--secondary-color);
     align-items:center;
-    /* align-self: stretch; */
-    /* flex-wrap: wrap; */
+    font-size: xx-large;
 }
 
 .about_me p, .work p, .contact_me a {
     padding: 10px;
-    display: flex;
-    align-items: center;
-    /* flex-direction: row; */
-    /* justify-content: space-evenly; */
+    /* display: block; */
+    /* display: flex; */
+    text-align: left;
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
     width: 80%;
+
+    /* justify-content: space-evenly; */
+    /* width: 80%; */
     /* display: inline-flex; */
 }
 
