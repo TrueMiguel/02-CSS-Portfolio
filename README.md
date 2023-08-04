@@ -21,3 +21,8 @@ Creating a portfolio webiste that employers can access
 ## Results
 Created a website that displays my portfolio
 
+## Live Site
+
+https://truemiguel.github.io/02-CSS-Portfolio/
+
+![Top screen shot of web site.](<assets/images/img.PNG>)
