@@ -32,6 +32,10 @@ header {
     background-color: var(--first-color);
 }
 
+header img {
+    max-height: 200px;
+}
+
 /* was having a issue with the font wasn't adjusting correctly.
 I had a fixed value for the height and that was messing up the adjustments. */
 
@@ -194,6 +198,10 @@ h3 {
         width: 100%;
     }
 
+    header img {
+        display: none;
+
+    }
     .flex-box {
         height: 200px;
     }
@@ -203,6 +211,10 @@ h3 {
 
     h2 {
         text-align: center;
+    }
+
+    header img {
+        display: none;
     }
 
     .flex-box {
