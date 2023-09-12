@@ -197,6 +197,7 @@ h3 {
     margin: 2%;
     align-items: flex-end;
     font-size: large;
+    color: var(--third-color)
 }
 
 @media screen and (max-width: 980px){
