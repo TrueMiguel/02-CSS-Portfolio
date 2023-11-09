@@ -199,6 +199,15 @@ h3 {
     font-size: large;
     color: var(--third-color)
 }
+.project-2 {
+    background-image: url("../images/Project_2.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    margin: 2%;
+    align-items: flex-end;
+    font-size: large;
+}
 
 @media screen and (max-width: 980px){
     header {
